@@ -1,34 +1,31 @@
-#include<iostream>
-using namespace std ;
+#include<bits/stdc++.h>
+using namespace std;
 
-int searchelement(int array[] , int size , int element){
-     for(int i= 0 ; i<size ; i++){
-        if(array[i] == element){
-            return i ;  
-        }
+int linear_search(vector<int>& vec , int size , int target ){
+    for(int i = 0 ; i < size ; i++){
+        if(vec[i] == target) 
+        return i;
     }
-    return -1;
+    return -1 ;
 }
 
 
 int main(){
+    
+int n;
+cin>>n; 
+vector<int> vec(n);
+for(int i=0;i<n;i++){
+    cin>>vec[i];
+}
 
-int array[] = {1,2,3,4,5,6,7,8,9,10} ;
-int size = sizeof(array)/sizeof(array[0]);
-int mynum;
-int index;
+int target ;
+cin>> target ;
 
-cout<<"Enter the number to search: " ;
-cin >> mynum ;
+int size = vec.size();
 
-index = searchelement(array , size , mynum) ;
+int index = linear_search(vec , size , target); 
+cout << "Element found at index: " << index ;
 
-if(index != -1){
-    cout<< mynum <<" is at index "<< index;
-    }
-    else{
-        cout<< mynum <<" is not in the array" ;
-    }
-
-    return 0;
+return 0 ;
 }
