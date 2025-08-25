@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int linear_search(vector<int>& vec , int size , int target ){
-    for(int i = 0 ; i < size ; i++){
+int linear_search(vector<int>& vec , int target ){
+    for(int i = 0 ; i < vec.size() ; i++){
         if(vec[i] == target) 
         return i;
     }
@@ -22,9 +22,7 @@ for(int i=0;i<n;i++){
 int target ;
 cin>> target ;
 
-int size = vec.size();
-
-int index = linear_search(vec , size , target); 
+int index = linear_search(vec  , target); 
 cout << "Element found at index: " << index ;
 
 return 0 ;
