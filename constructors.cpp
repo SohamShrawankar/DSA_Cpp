@@ -8,7 +8,6 @@ class Teacher{
     string dept ;
     string sub ;
     float salary ;
-
     //non-parameterized constructors
    Teacher() {
     dept = "computer science " ;
@@ -24,7 +23,7 @@ class Teacher{
 
     void getinfo(){
        cout << "name: " << name <<endl ;
- cout << "sub: "  << sub ;
+       cout << "sub: "  << sub  << endl ;
     } 
 
 };
@@ -33,7 +32,9 @@ int main(){
 
     Teacher t1("soham" , "CSE" , "CLOUD" , 25000) ;
     t1.getinfo() ;
-    Teacher t1 ;
-    cout << t1.dept ;
+
+    Teacher t2(t1) ;  // default copy constructor 
+    cout << t2.dept  ;
+
     return 0 ;
 }
