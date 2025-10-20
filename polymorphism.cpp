@@ -21,5 +21,30 @@ int main(){
 
 _______________________________________________________________
 
-// OPERATOR OVERLOADING
+// FUNCTION OVERRIDING 
+
+#include<bits/stdc++.h>
+using namespace std ;
+
+class base{
+ public: 
+    void virtual draw(){
+        cout<<"Base Function." ;
+    }
+};
+
+class derived : public base{ 
+    public:
+    void draw(){
+        cout<<"Derived Function." ;
+    }
+};
+
+int main(){
+  
+    derived d1 ;
+    d1.draw() ;
+
+    return 0 ;
+}
 
